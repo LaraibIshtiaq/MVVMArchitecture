@@ -7,19 +7,19 @@ import androidx.room.RoomDatabase
 import com.cheezycode.randomquote.models.Result
 
 @Database(entities = [Result::class], version = 1)
-abstract class QuoteDatabase : RoomDatabase() {
+abstract class QuoteDatabaseSample : RoomDatabase() {
 
     abstract fun quoteDao() : QuoteDao
 
     companion object{
         @Volatile
-        private var INSTANCE: QuoteDatabase? = null
+        private var INSTANCE: QuoteDatabaseSample? = null
 
-        fun getDatabase(context: Context): QuoteDatabase {
+        fun getDatabase(context: Context): QuoteDatabaseSample {
             if (INSTANCE == null) {
                 synchronized(this){
                     INSTANCE = Room.databaseBuilder(context,
-                        QuoteDatabase::class.java,
+                        QuoteDatabaseSample::class.java,
                         "quoteDB")
                         .build()
                 }

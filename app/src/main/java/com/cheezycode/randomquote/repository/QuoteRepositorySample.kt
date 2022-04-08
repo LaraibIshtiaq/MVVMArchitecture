@@ -7,15 +7,14 @@ import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.cheezycode.randomquote.api.QuoteService
-import com.cheezycode.randomquote.db.QuoteDatabase
+import com.cheezycode.randomquote.api.QuoteServiceSample
+import com.cheezycode.randomquote.db.QuoteDatabaseSample
 import com.cheezycode.randomquote.models.QuoteList
 import com.cheezycode.randomquote.utils.NetworkUtils
-import java.time.Duration
 
-class QuoteRepository(
-    private val quoteService: QuoteService,
-    private val quoteDatabase: QuoteDatabase,
+class QuoteRepositorySample(
+    private val quoteService: QuoteServiceSample,
+    private val quoteDatabase: QuoteDatabaseSample,
     private val applicationContext: Context
 ) {
 
